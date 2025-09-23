@@ -37,9 +37,9 @@
 | Corp ID | 企业 ID（可在企业微信管理后台获取）。 |
 | Corp Secret | 自建应用的 Secret。 |
 | Agent ID | 自建应用的 AgentID。 |
-| Default users | （可选）默认成员 ID，使用 `|` 分隔，例如 `zhangsan|lisi`。 |
-| Default parties | （可选）默认部门 ID，同样使用 `|` 分隔。 |
-| Default tags | （可选）默认标签 ID，同样使用 `|` 分隔。 |
+| Default users | （可选）默认成员 ID，使用 `\|` 分隔，例如 `zhangsan\|lisi`。 |
+| Default parties | （可选）默认部门 ID，同样使用 `\|` 分隔。 |
+| Default tags | （可选）默认标签 ID，同样使用 `\|` 分隔。 |
 
 > 默认收件人在发送消息时会自动生效，也可以在自动化中覆盖。
 
