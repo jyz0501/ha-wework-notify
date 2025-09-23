@@ -1,7 +1,7 @@
 {
   "domain": "wework_notify",
   "name": "WeWork Notify",
-  "version": "1.0.0",
+  "version": "v1.0.1",
   "documentation": "https://github.com/sanxian/ha-wework-notify",
   "requirements": [],
   "codeowners": ["@sanxian"],
