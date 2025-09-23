@@ -66,7 +66,8 @@ wework_notify.send_message
 
 | 字段 | 适用范围 | 说明 |
 | ---- | -------- | ---- |
-| `entry_id` / `entry_title` | 通用 | 指定要使用的入口，二选一。`entry_title` 为你在配置时输入的名称。 |
+| `config_entry` | 通用 | 在服务 UI 中下拉选择入口（推荐）。 |
+| `entry_id` / `entry_title` | 通用 | 手动指定入口（与 `config_entry` 互斥），`entry_title` 为配置时输入的名称。 |
 | `message_type` | 通用 | 消息类型，可选 `text`（默认）、`markdown`、`image`。 |
 | `message` | 文本/Markdown | 消息正文。 |
 | `to_user` / `to_party` / `to_tag` | 自建应用 | 覆盖默认收件人，使用 `|` 分隔多个值。会与默认收件人合并去重。 |

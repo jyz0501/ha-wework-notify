@@ -13,6 +13,8 @@ CONF_CORP_SECRET = "corp_secret"
 CONF_AGENT_ID = "agent_id"
 CONF_WEBHOOK_KEY = "webhook_key"
 
+CONF_CONFIG_ENTRY = "config_entry"
+
 CONF_DEFAULT_TO_USER = "default_to_user"
 CONF_DEFAULT_TO_PARTY = "default_to_party"
 CONF_DEFAULT_TO_TAG = "default_to_tag"

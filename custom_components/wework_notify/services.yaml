@@ -2,16 +2,20 @@ send_message:
   name: Send WeWork Message
   description: Send a message using a configured WeWork entry.
   fields:
+    config_entry:
+      name: Config Entry
+      description: Select one of the configured WeWork Notify entries.
+      selector:
+        config_entry:
+          integration: wework_notify
     entry_id:
       name: Entry ID
-      description: Target config entry id. Use either entry_id or entry_title.
-      example: "1234567890abcdef"
+      description: 手动指定 config entry id（与 config_entry 互斥）。
       selector:
         text:
     entry_title:
       name: Entry Title
-      description: Friendly name of the target entry. Use either entry_title or entry_id.
-      example: "Team Robot"
+      description: 手动输入入口名称（与 config_entry 互斥）。
       selector:
         text:
     message_type:

@@ -23,6 +23,7 @@ from .const import (
     CONF_ENTRY_ID,
     CONF_ENTRY_TITLE,
     CONF_ENTRY_TYPE,
+    CONF_CONFIG_ENTRY,
     CONF_IMAGE_BASE64,
     CONF_IMAGE_MD5,
     CONF_IMAGE_MEDIA_ID,
@@ -51,6 +52,7 @@ SEND_MESSAGE_SCHEMA = vol.Schema(
     {
         vol.Exclusive(CONF_ENTRY_ID, "entry_ref"): cv.string,
         vol.Exclusive(CONF_ENTRY_TITLE, "entry_ref"): cv.string,
+        vol.Exclusive(CONF_CONFIG_ENTRY, "entry_ref"): cv.string,
         vol.Optional(CONF_MESSAGE_TYPE, default=MESSAGE_TYPE_TEXT): vol.In(
             {MESSAGE_TYPE_TEXT, MESSAGE_TYPE_MARKDOWN, MESSAGE_TYPE_IMAGE}
         ),
@@ -151,6 +153,13 @@ async def _async_send_message(hass: HomeAssistant, call: ServiceCall) -> None:
 
 
 def _resolve_entry(hass: HomeAssistant, data: dict[str, Any]) -> ConfigEntry:
+    config_entry = data.get(CONF_CONFIG_ENTRY)
+    if config_entry:
+        resolved_entry = hass.config_entries.async_get_entry(config_entry)
+        if resolved_entry is None:
+            raise HomeAssistantError(f"No entry found with entry_id {config_entry}")
+        return resolved_entry
+
     entry_id = data.get(CONF_ENTRY_ID)
     entry_title = data.get(CONF_ENTRY_TITLE)
 
