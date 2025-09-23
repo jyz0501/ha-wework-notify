@@ -1,0 +1,49 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Add WeWork Notify Entry",
+        "description": "Select the WeCom integration type and provide a display name.",
+        "data": {
+          "name": "Entry name",
+          "entry_type": "Integration type"
+        }
+      },
+      "app": {
+        "title": "Configure WeCom Custom Application",
+        "description": "Provide the credentials for your WeCom custom application.",
+        "data": {
+          "corp_id": "Corp ID",
+          "corp_secret": "Corp secret",
+          "agent_id": "Agent ID",
+          "default_to_user": "Default users (pipe separated)",
+          "default_to_party": "Default parties (pipe separated)",
+          "default_to_tag": "Default tags (pipe separated)"
+        }
+      },
+      "bot": {
+        "title": "Configure WeCom Group Robot",
+        "description": "Paste the webhook key from your WeCom robot.",
+        "data": {
+          "webhook_key": "Webhook key"
+        }
+      }
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Default recipients",
+        "description": "Override the default recipients for this custom application entry.",
+        "data": {
+          "to_user": "Users (pipe separated)",
+          "to_party": "Parties (pipe separated)",
+          "to_tag": "Tags (pipe separated)"
+        }
+      }
+    }
+  },
+  "abort": {
+    "no_app_options": "Options are only available for custom application entries."
+  }
+}

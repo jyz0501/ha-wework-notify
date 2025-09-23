@@ -1,0 +1,75 @@
+send_message:
+  name: Send WeWork Message
+  description: Send a message using a configured WeWork entry.
+  fields:
+    entry_id:
+      name: Entry ID
+      description: Target config entry id. Use either entry_id or entry_title.
+      example: "1234567890abcdef"
+      selector:
+        text:
+    entry_title:
+      name: Entry Title
+      description: Friendly name of the target entry. Use either entry_title or entry_id.
+      example: "Team Robot"
+      selector:
+        text:
+    message_type:
+      name: Message Type
+      description: Type of WeWork message to send.
+      default: text
+      selector:
+        select:
+          options:
+            - text
+            - markdown
+            - image
+    message:
+      name: Message Content
+      description: Content for text or markdown messages.
+      example: "Hello from Home Assistant"
+      selector:
+        text:
+          multiline: true
+    to_user:
+      name: To User
+      description: Pipe separated WeCom user ids (for custom application entries).
+      example: "user1|user2"
+      selector:
+        text:
+    to_party:
+      name: To Party
+      description: Pipe separated department ids (for custom application entries).
+      selector:
+        text:
+    to_tag:
+      name: To Tag
+      description: Pipe separated tag ids (for custom application entries).
+      selector:
+        text:
+    mentioned_list:
+      name: Mentioned Users
+      description: Pipe separated user ids to mention (robot entries with text messages).
+      selector:
+        text:
+    mentioned_mobile_list:
+      name: Mentioned Mobiles
+      description: Pipe separated mobile numbers to mention (robot entries with text messages).
+      selector:
+        text:
+    image_media_id:
+      name: Image Media ID
+      description: Media ID obtained from WeCom temporary material API (custom applications sending image messages).
+      selector:
+        text:
+    image_base64:
+      name: Image Base64
+      description: Base64 encoded image content (robots sending image messages).
+      selector:
+        text:
+          multiline: true
+    image_md5:
+      name: Image MD5
+      description: MD5 checksum corresponding to the provided base64 image (robots sending image messages).
+      selector:
+        text:

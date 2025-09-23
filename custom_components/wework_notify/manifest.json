@@ -1,0 +1,10 @@
+{
+  "domain": "wework_notify",
+  "name": "WeWork Notify",
+  "version": "1.0.0",
+  "documentation": "https://github.com/sanxian/ha-wework-notify",
+  "requirements": [],
+  "codeowners": ["@sanxian"],
+  "config_flow": true,
+  "iot_class": "cloud_push"
+}

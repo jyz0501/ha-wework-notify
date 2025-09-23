@@ -1,0 +1,49 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "添加企业微信通知入口",
+        "description": "请选择要对接的企业微信类型并填写显示名称。",
+        "data": {
+          "name": "名称",
+          "entry_type": "对接类型"
+        }
+      },
+      "app": {
+        "title": "配置企业微信自建应用",
+        "description": "请输入自建应用的相关凭据。",
+        "data": {
+          "corp_id": "企业ID",
+          "corp_secret": "应用Secret",
+          "agent_id": "Agent ID",
+          "default_to_user": "默认成员（用|分隔）",
+          "default_to_party": "默认部门（用|分隔）",
+          "default_to_tag": "默认标签（用|分隔）"
+        }
+      },
+      "bot": {
+        "title": "配置企业微信群机器人",
+        "description": "填写机器人提供的Webhook Key。",
+        "data": {
+          "webhook_key": "Webhook Key"
+        }
+      }
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "默认收件人",
+        "description": "为该自建应用入口设置或覆盖默认收件人。",
+        "data": {
+          "to_user": "成员（用|分隔）",
+          "to_party": "部门（用|分隔）",
+          "to_tag": "标签（用|分隔）"
+        }
+      }
+    }
+  },
+  "abort": {
+    "no_app_options": "仅自建应用入口支持配置选项。"
+  }
+}
