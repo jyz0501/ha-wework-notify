@@ -264,8 +264,8 @@ class _WeWorkAPIError(Exception):
 
 
 def _merge_recipient(override: str | None, default: str | None) -> str | None:
-    override = override.strip() if isinstance(override, str) else None
-    default = default.strip() if isinstance(default, str) else None
+    override = override.strip() if isinstance(override, str) else override
+    default = default.strip() if isinstance(default, str) else default
     if override and default:
         # WeCom expects recipients separated by '|'. Use unique order preserving merge.
         existing = []
