@@ -3,6 +3,7 @@
   "name": "WeWork Notify",
   "version": "v1.0.1",
   "documentation": "https://github.com/sanxian/ha-wework-notify",
+  "issue_tracker": "https://github.com/sanxian/ha-wework-notify/issues",
   "requirements": [],
   "codeowners": ["@sanxian"],
   "config_flow": true,
