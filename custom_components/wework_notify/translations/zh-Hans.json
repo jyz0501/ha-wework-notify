@@ -43,6 +43,66 @@
       }
     }
   },
+  "services": {
+    "send_message": {
+      "name": "发送企业微信消息",
+      "description": "通过配置的企业微信入口发送消息。",
+      "fields": {
+        "config_entry": {
+          "name": "配置入口",
+          "description": "选择已配置的企业微信通知入口。"
+        },
+        "entry_id": {
+          "name": "入口ID",
+          "description": "手动指定配置入口ID（与配置入口互斥）。"
+        },
+        "entry_title": {
+          "name": "入口名称",
+          "description": "手动输入入口名称（与配置入口互斥）。"
+        },
+        "message_type": {
+          "name": "消息类型",
+          "description": "要发送的企业微信消息类型。"
+        },
+        "message": {
+          "name": "消息内容",
+          "description": "文本或Markdown消息的内容。"
+        },
+        "to_user": {
+          "name": "收件人",
+          "description": "用|分隔的企业微信用户ID（仅自建应用入口）。"
+        },
+        "to_party": {
+          "name": "收件部门",
+          "description": "用|分隔的企业微信部门ID（仅自建应用入口）。"
+        },
+        "to_tag": {
+          "name": "收件标签",
+          "description": "用|分隔的企业微信标签ID（仅自建应用入口）。"
+        },
+        "mentioned_list": {
+          "name": "@成员列表",
+          "description": "用|分隔的要@的成员ID（仅群机器人入口）。"
+        },
+        "mentioned_mobile_list": {
+          "name": "@手机号列表",
+          "description": "用|分隔的要@的手机号（仅群机器人入口）。"
+        },
+        "image_media_id": {
+          "name": "图片媒体ID",
+          "description": "通过企业微信素材API获取的媒体ID（仅自建应用发送图片消息）。"
+        },
+        "image_base64": {
+          "name": "图片Base64",
+          "description": "图片文件的Base64编码（仅群机器人发送图片消息）。"
+        },
+        "image_md5": {
+          "name": "图片MD5",
+          "description": "图片文件的MD5校验值（仅群机器人发送图片消息）。"
+        }
+      }
+    }
+  },
   "abort": {
     "no_app_options": "仅自建应用入口支持配置选项。"
   }
