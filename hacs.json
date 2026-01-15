@@ -1,0 +1,9 @@
+{
+  "name": "WeWork Notify",
+  "description": "A Home Assistant custom component for sending messages to WeWork (WeCom).",
+  "filename": "wework_notify.zip",
+  "hide_default_branch": false,
+  "homeassistant": "2023.1.0",
+  "render_readme": true,
+  "zip_release": true
+}
